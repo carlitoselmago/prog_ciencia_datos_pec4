@@ -1,7 +1,56 @@
 # prog_ciencia_datos_pec4
 
-# autor:
-Carlos Carbonell
+## Descripción
+Este proyecto contiene una serie de ejercicios de programación que realizan cálculos y análisis sobre un dataset de una competición de ciclistas en Huesca. Los ejercicios se dividen en cinco módulos independientes, cada uno con un propósito específico:
+
+1. **Ejercicio 1**: Carga y visualización inicial del dataset.
+2. **Ejercicio 2**: Anonimización de nombres de los ciclistas.
+3. **Ejercicio 3**: Agrupación de tiempos de llegada en intervalos.
+4. **Ejercicio 4**: Limpieza y normalización de los nombres de los clubes ciclistas.
+5. **Ejercicio 5**: Análisis del mejor ciclista por tiempo y su posición global en la competición.
+
+Cada módulo puede ejecutarse de manera individual o a través del archivo principal `main.py`, que ejecuta todos los ejercicios en secuencia.
+
+## Instalación
+
+Instala las dependencias necesarias con:
+```bash
+pip install -r requirements.txt
+```
+
+## Ejecución
+
+### Ejecutar todos los ejercicios
+
+Para ejecutar todos los ejercicios en secuencia, utiliza el archivo `main.py`:
+```bash
+python main.py
+```
+
+### Ejecutar ejercicios individuales
+
+Cada ejercicio puede ejecutarse de manera independiente desde su archivo correspondiente. Por ejemplo:
+```bash
+python ejercicio1.py
+python ejercicio2.py
+```
+
+## Tests
+
+Se incluye un conjunto de tests para verificar el funcionamiento correcto de cada ejercicio. Estas pruebas están ubicadas en la carpeta `test` y utilizan el framework `unittest`.
+
+### Ejecutar todos los tests
+
+Para ejecutar todas las pruebas de la aplicación, utiliza el siguiente comando:
+```bash
+python run_all_tests.py
+```
+
+## Compatibilidad
+Este proyecto ha sido testeado en:
+- Windows 11
+- Linux Fedora 38
+
 
 ### NOTA:
 
