@@ -22,14 +22,14 @@ pip install -r requirements.txt
 
 ### Ejecutar todos los ejercicios
 
-Para ejecutar todos los ejercicios en secuencia, utiliza el archivo `main.py`:
+Para ejecutar todos los ejercicios utiliza el archivo `main.py`:
 ```bash
 python main.py
 ```
 
 ### Ejecutar ejercicios individuales
 
-Cada ejercicio puede ejecutarse de manera independiente desde su archivo correspondiente. Por ejemplo:
+ Cada ejercicio puede ejecutarse de manera independiente. Por ejemplo:
 ```bash
 python ejercicio1.py
 python ejercicio2.py
@@ -37,11 +37,11 @@ python ejercicio2.py
 
 ## Tests
 
-Se incluye un conjunto de tests para verificar el funcionamiento correcto de cada ejercicio. Estas pruebas están ubicadas en la carpeta `test` y utilizan el framework `unittest`.
+Se incluye un conjunto de tests utilizando la librería `unitttest` . Los test se encuentran en la carpeta `test`.
 
 ### Ejecutar todos los tests
 
-Para ejecutar todas las pruebas de la aplicación, utiliza el siguiente comando:
+Para ejecutar todas los tests con un solo comando:
 ```bash
 python run_all_tests.py
 ```
