@@ -3,11 +3,18 @@ import matplotlib.pyplot as plt
 import os
 
 class helpers():
+    """
+    Conjunto de funciones recurrentes para mostrar datos y enbellecimiento de datos en terminal
+    """
 
     def __init__(self):
         pass
 
     def plot_hist(self,X,Y,nombre_archivo='histograma',titulo='Mi título',labelx='',labely='', mostrar=True, guardar=True):
+        """
+        Genera un gráfico matplotlib dados los vectores X e Y.
+        Opcionalmente podemos mostrarlos y/o guardarlos en un archivo png
+        """
         # Generamos el histograma con matplotlib
         plt.figure(figsize=(10, 6))
         plt.bar(X, Y)
@@ -26,7 +33,6 @@ class helpers():
         """
         Imprime un mensaje con decoraciones para mayor legibilidad en terminal
         """
-    
         print("****************************************************************")
         print(msg)
         print("****************************************************************")
@@ -34,7 +40,7 @@ class helpers():
 
     def print_cabecera(self,msg):
         """
-        Imprime una cabecera para separar cada ejercicio
+        Imprime una cabecera para separar cada ejercicio en terminal
         """
         print("")
         total_width = len(msg) + 52

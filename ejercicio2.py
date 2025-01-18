@@ -24,7 +24,9 @@ class ejercicio():
         return df
 
     def main(self, df):
-        
+        """
+        Anonimización de nombres de los ciclistas
+        """
         # Anonimizamos los nombres
         df = self.name_surname(df)
         if self.verbose:

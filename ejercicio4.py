@@ -20,7 +20,9 @@ class ejercicio():
             self.helpers.print_cabecera(self.name)
 
     def clean_club(self,club):
-
+        """
+        Unifica criterios de nombres de club para evitar duplicados
+        """
         # Convertimos a mayúsculas
         club = club.upper()
         
@@ -46,6 +48,9 @@ class ejercicio():
         return club
 
     def main(self,df):
+        """
+        Limpieza y normalización de los nombres de los clubes ciclistas.
+        """
         df["club_clean"] = df["club"].apply(self.clean_club)
         if self.verbose:
             self.helpers.print_msg(f'Mostramos los 15 primeros ciclistas después de crear la nueva columna club_clean: \n\n {self.helpers.pandas_print(df.head(15))}')
@@ -58,7 +63,7 @@ class ejercicio():
         
         # Para poder visualizarlo escogemos la cantidad de los clubes más grandes
         top = 10
-
+        
         agrupados_clubs_top = agrupados_clubs.head(top)
 
         if self.verbose:

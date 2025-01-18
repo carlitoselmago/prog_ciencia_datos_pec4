@@ -9,23 +9,23 @@ if __name__ == "__main__":
     #Definimos una variable común para verbose
     v = True
 
-    # Ex1
+    # Ejercicio1
     ex1 = ex1(verbose = v)
     df = ex1.main(dataset_uri = 'data/dataset.csv',valores = 5)
 
-    # Ex2
+    # Ejercicio2
     ex2 = ex2(verbose = v)
     df = ex2.main(df)
 
-    # Ex3
+    # Ejercicio3
     ex3 = ex3(verbose = v)
     df = ex3.main(df)
 
-    # Ex4
+    # Ejercicio4
     ex4 = ex4(verbose = v)
     df = ex4.main(df)
 
-    # Ex5
+    # Ejercicio5
     ex5 = ex5(verbose = v)
     df = ex5.main(df)
    

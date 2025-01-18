@@ -17,7 +17,7 @@ class ejercicio():
 
     def main(self, dataset_uri:str = 'data/dataset.csv', valores:int = 5) -> pd.DataFrame:
         """
-        
+        Carga y visualización inicial del dataset
         """
         df = pd.read_csv(dataset_uri, delimiter=";")
         if self.verbose:

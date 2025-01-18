@@ -19,6 +19,9 @@ class ejercicio():
             self.helpers.print_cabecera(self.name)
 
     def minutes_002040(self,time_str):
+        """
+        Redondea strings de tiempo a múltiplos de 20min en formato hh:mi
+        """
         hours, minutes, seconds = map(int, time_str.split(":"))
 
         #Redondeamos los minutos en el múltiplo de 20 más cercano
@@ -29,7 +32,9 @@ class ejercicio():
 
 
     def main(self, df):
-        
+        """
+        Agrupación de tiempos de llegada en intervalos
+        """
         df["time_grouped"] = df["time"].apply(self.minutes_002040)
         if self.verbose:
             self.helpers.print_msg(f'Mostramos los 15 primeros ciclistas después de crear la nueva columna time_grouped: \n\n {self.helpers.pandas_print(df.head(15))}')

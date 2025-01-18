@@ -19,30 +19,44 @@ class ejercicio():
             self.helpers.print_cabecera(self.name)
 
     def filtar_por_club(self, df, club:str = ""):
+        """
+        Seleccionamos solo los clubs que coincidan con la búsqueda
+        """
         return df[df["club_clean"] == club]
 
     def mejor_tiempo(self,df):
+        """
+        Devuelve el tiempo menor del dataframe en la columna time
+        """
         df = df.sort_values(by=["time"], ascending=True).reset_index(drop=True)
         return df.head(1)
     
     def posicion_global(self,df,ciclista):
+        """
+        Devuelve la posición respecto al conjunto de ciclistas en base al tiempo de manera ascendente
+        """
         # Reseteamos el índice del dataframe para actualizarl los índices
         df_reset = df.reset_index(drop=True)
         ciclista = df_reset.loc[df_reset.eq(ciclista.iloc[0]).all(axis=1)]
 
-        # Obtenemos el índice global del mejor ciclista de UCSC
+        # Obtenemos el índice global del mejor ciclista
         posicion = ciclista.index[0]
 
         return posicion
     
     def porcentaje_posicion(self,df, posicion):
+        """
+        Devuelve la posición de manera percentual
+        """
         df_reset = df.reset_index(drop=True)
         posicion_percent = (df_reset.index.get_loc(posicion) / len(df_reset)) * 100
 
         return posicion_percent
 
     def main(self,df):
-        
+        """
+        Análisis del mejor ciclista por tiempo y su posición global en la competición
+        """
         # Filtramos por el club
         UCSC_df = self.filtar_por_club(df, "UCSC")
 
